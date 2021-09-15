@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Carousel start -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active"  data-bs-interval="10000" style="background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,0.5)), url('{% static "images/one.jpg" %}');">
+                <div class="overlay-image"></div>
+                <div class="container">
+                    <h1 style="font-weight:900;">HOTEL  <span style="color:#FFA500;">MANAGEMENT</span> SYSTEM</h1>
+                    <p style="text-align: center; font-size: 14px;">
+                       We have the best room services and offers
+                    </p>
+                    <a href="/contact.html" class="fw-bold" style="border-radius: 25px; padding: 12px 40px; text-decoration:none; background-color:transparent;  border:2px solid #FFA500; color:white;">Contact Us</a>
+                </div>
+            </div>
+            <div class="carousel-item"  data-bs-interval="5000" style="background-image:linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,0.5)), url('{% static "images/two.jpg" %}');">
+                <div class="container">
+                    <h1 style="font-weight:900;">HOTEL  <span style="color:#FFA500;">MANAGEMENT </span> SYSTEM</h1>
+                    <p style="text-align: center; font-size: 14px;">
+                        We are the best in this business
+                    </p>
+                    <a href="/contact.html" class="fw-bold"  style="border-radius: 25px; padding: 12px 40px; text-decoration:none; background-color:transparent; border:2px solid #FFA500;  color:white;" >Contact Us</a>
+                </div>
+            </div>
+            <div class="carousel-item"  data-bs-interval="5000" style="background-image:linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,0.5)), url('{% static "images/three.jpg" %}');">
+                <div class="container">
+                    <h1 style="font-weight:900;" >HOTEL  <span style="color:#FFA500;">MANAGEMENT</span> SYSTEM</h1>
+                    <p style="text-align: center; font-size: 14px;">
+                        An award winning hotel
+                    </p>
+                    <a href="/contact.html" class="fw-bold"  style="border-radius: 25px; padding: 12px 40px; text-decoration:none; background-color: transparent;  border:2px solid #FFA500; color:white;"  >Contact Us</a>
+                </div>
+            </div>
+            <div class="carousel-item"  data-bs-interval="5000" style="background-image:linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,0.5)), url('{% static "images/four.jpg" %}');">
+                <div class="container">
+                    <h1 style="font-weight:900;" >HOTEL  <span style="color:#FFA500;">MANAGEMENT</span> SYSTEM </h1>
+                    <p style="text-align: center; font-size: 14px;">
+                        We are excellence in our work and services rendered
+                    </p>
+                    <a href="/contact.html" class="fw-bold"  style="border-radius: 25px; padding: 12px 40px; text-decoration:none; background-color: transparent;  border:2px solid #FFA500; color:white;"  >Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <!-- Carousel end -->
+
+              <!-- Our room -->
+  {% include 'booking/room_base.html' %}
+  <!-- End of our room -->
+{% endblock content %}

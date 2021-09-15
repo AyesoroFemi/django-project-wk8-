@@ -1,0 +1,115 @@
+{% load static %}
+{% block content %}
+<h3 class="text-center my-5">Our Rooms</h3>
+    <section style="margin: 50px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 my-2" >
+                        <a href="{% url 'room' %}" class="text-decoration-none">
+                            <div style="background-image: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0,0.2)), url('{% static "images/bed1.png" %}'); height: 300px;>
+                                <a href="#" > 
+                                    <div class="shadow">
+                                        <div class="fw-bold px-2" style="padding-top:150px;">
+                                            <p class="mt-5 fs-4 text-light">Serviced Apartment</p>
+                                            <span class="text-decoration-none" style="background-color:#FFA500; padding:0 10px;">from N100,000.00</span>
+                                        </div>
+                                    </div>
+                                 </a>
+                             </div>
+                        </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-2" >
+                    <a href="{% url 'room' %}" class="text-decoration-none">
+                        <div style="background-image: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0,0.2)), url('{% static "images/bed2.png" %}'); height: 300px;>
+                            <a href="#" class=""> 
+                                <div class="shadow">
+                                    <div class="fw-bold px-2" style="padding-top:150px;">
+                                        <p class="mt-5 fs-4 text-light">Deluxe Room</p>
+                                        <span  class="text-decoration-none" style="background-color:#FFA500; padding:0 10px;">from N25,000.00</span>
+                                    </div>
+                                </div>
+                             </a>
+                        </div>
+                    </a>
+               </div>
+               <div class="col-sm-12 col-md-6 col-lg-4 my-2"  >
+                    <a href="{% url 'room' %}" class="text-decoration-none">
+                        <div style="background-image: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0,0.2)), url('{% static "images/bed3.png" %}'); height: 300px;>
+                            <a href="#" class=""> 
+                                <div class="shadow">
+                                    <div class="fw-bold px-2" style="padding-top:150px;">
+                                        <p class="mt-5 fs-4 text-light">King Suite</p>
+                                        <span class="text-decoration-none" style="background-color:#FFA500; padding:0 10px;">from N45,000.00</span>
+                                    </div>
+                                </div>
+                             </a>
+                        </div>
+                    </a>
+           </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3 class="text-center my-5">Book Now</h3>
+            <div class="d-flex justify-content-center">
+               
+                {% if request.user.is_authenticated %}
+                  <a href="{% url 'initiate-payment' %}" style="background-color:#FFA500; text-decoration: none; padding:15px; color: #fff; font-weight: 900;">Make payment</a>
+                {% else %}
+                
+                  <a style="background-color:#FFA500; text-decoration: none; padding:15px; color: #fff; font-weight: 900;" class="nav-link me-3" href="{% url 'login' %}">Login | Sign Up to make payment </a>
+                {% endif %}
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div style="color:#FFA500;" class="d-flex">
+                        <span><i class="fas fa-wifi fa-3x" ></i></span>
+                        <div style="color:black; padding-left: 20px;">
+                            <p class="fs-4">Free Hi-Speed Wifi</p>
+                            <p style="height: 3px; width: 50px; background-color:#FFA500;"></p>
+                            <p style="font-size: 12px;">We have Hi-Speed WiFi internet for our guest</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div style="color:#FFA500;" class="d-flex">
+                        <span><i class="fas fa-plane fa-3x"></i></span>
+                        <div style="color:black; padding-left: 20px;">
+                            <p class="fs-4">Airport Transfers</p>
+                            <p style="height: 3px; width: 50px; background-color:#FFA500;"></p>
+                            <p style="font-size: 12px;">We have Hi-Speed WiFi internet for our guest</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div style="color:#FFA500;" class="d-flex">
+                        <span><i class="fas fa-phone-alt fa-3x"></i></span>
+                        <div style="color:black; padding-left: 20px;">
+                            <p class="fs-4">24 Hour Front Desk</p>
+                            <p style="height: 3px; width: 50px; background-color:#FFA500;"></p>
+                            <p style="font-size: 12px;">We have Hi-Speed WiFi internet for our guest</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div style="color:#FFA500;" class="d-flex">
+                        <span><i class="fas fa-swimming-pool fa-3x"></i></span>
+                        <div style="color:black; padding-left: 20px;">
+                            <p class="fs-4">Swimming Pool & Jacuzzi</p>
+                            <p style="height: 3px; width: 50px; background-color:#FFA500;"></p>
+                            <p style="font-size: 12px;">We have Hi-Speed WiFi internet for our guest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
